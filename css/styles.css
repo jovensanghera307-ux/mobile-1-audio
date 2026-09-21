@@ -293,10 +293,14 @@ a:focus-visible, .btn:focus-visible, button:focus-visible, input:focus-visible, 
 
 /* ---------- Gallery ---------- */
 .gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
-.gallery-item { position: relative; aspect-ratio: 4 / 3; border-radius: var(--radius); overflow: hidden; border: 1px solid var(--line-2); display: flex; align-items: center; justify-content: center; transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease; }
-.gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s cubic-bezier(.2,.7,.3,1); }
+.gallery-item { position: relative; aspect-ratio: 4 / 3; border-radius: var(--radius); overflow: hidden; border: 1px solid var(--line-2); transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease; }
+.gallery-item img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s cubic-bezier(.2,.7,.3,1); }
 .gallery-item:hover { transform: translateY(-3px); box-shadow: var(--shadow); border-color: var(--accent); }
 .gallery-item:hover img { transform: scale(1.06); }
+.gallery-hero { position: relative; aspect-ratio: 16 / 9; border-radius: var(--radius); overflow: hidden; border: 1px solid var(--line-2); margin-bottom: 16px; display: block; }
+.gallery-hero img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 68%; transition: transform 0.5s cubic-bezier(.2,.7,.3,1); }
+.gallery-hero:hover img { transform: scale(1.04); }
+.gallery-item figcaption, .gallery-hero figcaption { position: absolute; left: 0; right: 0; bottom: 0; margin: 0; padding: 22px 16px 12px; background: linear-gradient(to top, rgba(0,0,0,0.82), rgba(0,0,0,0) 100%); font-family: var(--font-head); font-weight: 700; font-size: 0.82rem; letter-spacing: 0.04em; color: #fff; }
 .gallery-ph { font-family: var(--font-head); font-weight: 700; font-size: 0.82rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-3); }
 
 /* ---------- Finance band ---------- */
