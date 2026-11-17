@@ -64,7 +64,7 @@
               <div class="info-row">
                 <span class="card-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5c0 9 6 15 15 15l0-3.5-4-1.5-2 2c-2.5-1.2-4.3-3-5.5-5.5l2-2L8 4.5 4.5 5z"/></svg></span>
                 <div>
-                  <h4>Call or Text</h4>
+                  <h4>Call Us</h4>
                   <a href="tel:+13022686466">(302) 268-6466</a>
                 </div>
               </div>
@@ -104,8 +104,11 @@
             <div class="info-card">
               <h2 style="font-size:1.5rem;margin-bottom:6px">Request a Free Quote</h2>
               <p style="color:var(--text-2);margin-bottom:22px;font-size:0.96rem">Tell us your vehicle and what you're after — we'll follow up fast.</p>
-              <!-- Replace YOUR_FORM_ID with the client's Formspree endpoint (formspree.io) before launch. Until then the form shows a "call us" message instead of breaking. -->
-              <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" data-contact>
+              <!-- Quote requests are emailed to the owner via FormSubmit (formsubmit.co). The first submission sends an Activate link to that inbox. -->
+              <form action="https://formsubmit.co/yento353@gmail.com" method="POST" data-contact>
+                <input type="hidden" name="_subject" value="New quote request from the Mobile 1 Audio website">
+                <input type="hidden" name="_template" value="table">
+                <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
                 <div class="field">
                   <label for="name">Name</label>
                   <input type="text" id="name" name="name" placeholder="Your name" required>
